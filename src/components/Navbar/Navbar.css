@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.mainContainer{
+    width: 100%;
+    background: linear-gradient(135deg, #ff6b35, #ff914d);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.foodLogo{
+    font-size: 35px;
+    animation: bounce 2s infinite;
+}
+.listItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 35px;
+    font-weight: 900;
+    margin-right: 10px;
+    list-style: none;
+}
+.listItems li a{
+    text-decoration : none;
+    color: white ;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.3s;
+    position: relative;
+    
+}
+.listItems li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+
+}
+.listItems li a:hover::after{
+    width: 100%;
+}
+.listItems li a:hover{
+    color: #fff8dc
+}
+.listItems li:last-child a{
+    font-size: 24px;
+    background: white;
+    color: #ff6b35;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.listItems li:last-child span{
+    position: absolute;
+    bottom: 22px;
+    left: 30px;
+}
+.listItems li:last-child a:hover{
+    transform:  scale(1.1) rotate(10deg);
+    background: #fff8dc;
+}
+@keyframes bounce {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+@media (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .listItems {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
